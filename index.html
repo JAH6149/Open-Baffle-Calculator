@@ -27,7 +27,8 @@
       font-size: 1.6em;
     }
     input[type="number"], button {
-      width: 50%;
+      text-align: center;
+      width: 100%;
       padding: 10px;
       font-size: 1em;
       margin: 10px 0;
@@ -77,7 +78,7 @@
         alert("Please enter a valid baffle width.");
         return;
       }
-      const height = width * 1.618;
+      const height = width * 1.62;
       const rolloff = 0.707 * 1130 / width;
       document.getElementById("height").value = height.toFixed(2);
       document.getElementById("rolloff").value = rolloff.toFixed(2);
