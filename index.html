@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Baffle Sizing Calculator</title>
+  <title>Open Baffle Size Calculator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@
       margin: 0 0 15px 0;
       font-size: 1em;
       color: #555;
-
+    }
     input[type="number"], button {
       text-align: center;
       width: 100%;
@@ -68,12 +68,15 @@
 </head>
 <body>
   <div class="calculator">
-    <h2>Open Baffle Sizing Calculator</h2>
+    <h2>Open Baffle Size Calculator</h2>
     <p class="author">By: Glen Denning</p>
+
     <input type="number" id="width" placeholder="Enter Baffle Width in inches">
+
     <button onclick="calculate()">Calculate</button>
+
     <div class="result">
-      <p>Baffle Height: <output id="height"></output> inches (or greater)</p>
+      <p>Baffle Height: <output id="height"></output> inches</p>
       <p>Roll-Off Frequency: <output id="rolloff"></output> Hz</p>
     </div>
   </div>
@@ -81,7 +84,7 @@
   <script>
     function calculate() {
       const width = parseFloat(document.getElementById("width").value);
-      if (isNaN(width) || width <= 6) {
+      if (isNaN(width) || width <= 0) {
         alert("Please enter a valid baffle width.");
         return;
       }
