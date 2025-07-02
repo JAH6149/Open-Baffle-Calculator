@@ -26,6 +26,12 @@
       margin-bottom: 20px;
       font-size: 1.6em;
     }
+    p.author {
+      text-align: center;
+      margin: 0 0 15px 0;
+      font-size: 1em;
+      color: #555;
+
     input[type="number"], button {
       text-align: center;
       width: 100%;
@@ -63,10 +69,11 @@
 <body>
   <div class="calculator">
     <h2>Open Baffle Sizing Calculator</h2>
+    <p class="author">By: Glen Denning</p>
     <input type="number" id="width" placeholder="Enter Baffle Width in inches">
     <button onclick="calculate()">Calculate</button>
     <div class="result">
-      <p>Baffle Height: <output id="height"></output> inches</p>
+      <p>Baffle Height: <output id="height"></output> inches (or greater)</p>
       <p>Roll-Off Frequency: <output id="rolloff"></output> Hz</p>
     </div>
   </div>
