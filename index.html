@@ -23,7 +23,7 @@
     }
     h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       font-size: 1.6em;
     }
     p.author {
@@ -70,11 +70,8 @@
   <div class="calculator">
     <h2>Open Baffle Sizing Calculator</h2>
     <p class="author">By: Glen Denning</p>
-    <p></p>
     <input type="number" id="width" placeholder="Enter Baffle Width in inches">
-    
     <button onclick="calculate()">Calculate</button>
-    
     <div class="result">
       <p>Baffle Height: <output id="height"></output> inches (or greater)</p>
       <p>Roll-Off Frequency: <output id="rolloff"></output> Hz</p>
@@ -84,7 +81,7 @@
   <script>
     function calculate() {
       const width = parseFloat(document.getElementById("width").value);
-      if (isNaN(width) || width <= 0) {
+      if (isNaN(width) || width <= 6) {
         alert("Please enter a valid baffle width.");
         return;
       }
